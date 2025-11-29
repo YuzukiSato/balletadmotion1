@@ -1,0 +1,62 @@
+body {
+    font-family: "Noto Sans JP", serif;
+    background: #faf7f5;
+    color: #5a4632;
+    margin: 0;
+}
+
+/* ヒーロー画像部分 */
+.hero {
+    height: 60vh;
+    background: url("images/top.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.hero-text h1 {
+    font-size: 36px;
+    color: rgb(255, 255, 255);
+}
+.hero-text p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: white;
+}
+
+/* セクション共通 */
+.section {
+    padding: 100px 0;
+    width: 90%;
+    margin: auto;
+}
+
+.section-title {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* メニュー部分（あなたの用途に近い） */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 24px;
+}
+
+.menu-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 160px;
+    background: #e6d2d0;
+    border-radius: 20px;
+    color: #5a4632;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.menu-card:hover {
+    background: #d7b9b7;
+}
