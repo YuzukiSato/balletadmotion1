@@ -8,7 +8,7 @@ body {
 /* ヒーロー画像部分 */
 .hero {
     height: 60vh;
-    background: url("images/top.jpg") center/cover no-repeat;
+    background: url("top1.jpg") center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -75,4 +75,59 @@ body {
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.menu-card {
+    display: block;
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: 0.2s;
+}
+
+.menu-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* スマホ用（2列） */
+@media (max-width: 768px) {
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.back-btn {
+  width: 40px;
+  position: fixed;
+  top: 20px;
+  left: 30px;
+  z-index: 1000;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.back-btn:hover {
+  opacity: 0.7;
+}
+
+.term-title-box {
+  display: inline-block;      
+  background: #e5e5e5;        /* 淡いグレー */
+  color: #2f4f4f;             /* 深い緑系（ダークスレートグレー） */
+  padding: 0px 50px;
+
 }
