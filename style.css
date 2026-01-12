@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  font-family: "Yu Gothic Medium", "游ゴシック Medium", "Yu Gothic", "游ゴシック体", "ヒラギノ角ゴ Pro W3", serif;
+    font-family: "Noto Serif JP", "Playfair Display", serif;
   line-height: 1.7;
   background: #faf7f5;
   color: #5a4632;
