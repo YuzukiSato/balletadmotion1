@@ -1,71 +1,359 @@
-body {
-    font-family: "Noto Sans JP", serif;
-    background: #faf7f5;
-    color: #5a4632;
-    margin: 0;
+/*共通部分
+-----------------------*/
+html {
+  font-size: 100%;
 }
 
-/* ヒーロー画像部分 */
-.hero {
-    height: 60vh;
-    background-color: #F4AEB3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+body {
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", "Yu Gothic", "游ゴシック体", "ヒラギノ角ゴ Pro W3", serif;
+  line-height: 1.7;
+  background: #faf7f5;
+  color: #5a4632;
+  margin: 0;
 }
-.hero-text h1 {
-    font-size: 36px;
-    color: rgb(255, 255, 255);
+
+a {
+  text-decoration: none;
 }
-.hero-text p {
-    margin-top: 10px;
-    font-size: 18px;
-    color: white;
+
+img {
+  max-width: 100%;
+}
+
+/* Head
+-----------------------*/
+.logo {
+  width: 300px;
+  margin-top: 0px;
+}
+
+.logo a {
+  color: #fff;
+}
+
+.main-nav {
+  display: flex;
+  font-size: 15px;
+  text-transform: uppercase;
+  margin-top: 30px;
+  list-style: none;
+  /*margin-right: 20px;*/
+}
+
+.main-nav li {
+  margin-left: 36px;
+}
+
+.main-nav a {
+  color: #fff;
+}
+
+.main-nav a:hover {
+  color: #d7b9b7;
+}
+
+.page-header {
+
+  display: flex;
+  justify-content: space-between;
+  /*position: fixed;*/
+}
+
+/* ハンバーガーはPCでは隠す */
+.hamburger {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.hamburger-bar {
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: #fff;
+  /* 背景が白なら黒に */
+  margin: 6px 0;
+}
+
+.menu-logo {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 4%;
+
+}
+
+/* HOME
+-------------------- */
+.home-content {
+  text-align: center;
+  margin-top: 10%;
+}
+
+.home-content p {
+  font-size: 1.125rem;
+  margin: 10px 0 42px;
+}
+
+/*見出し*/
+.page-title {
+  font-size: 2rem;
+  font-family: 'Philosopher', serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  color: #ffffff;
+}
+
+/*ボタン*/
+.bottun {
+  font-size: 1.375rem;
+  background: #d7b9b7;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 18px 36px;
+
+}
+
+.bottun:hover {
+  background: #d39f9c;
+}
+
+.big-big {
+  background-size: cover;
+  background-position: center top;
+}
+
+#home {
+  background-image: url(images/top2.jpg), linear-gradient(#3c4033, #d7b9b7);
+  background-blend-mode: multiply;
+  min-height: 100vh;
+}
+
+#home .page-title {
+  text-transform: none;
 }
 
 /* セクション共通 */
 .section {
-    padding: 100px 0;
-    width: 90%;
-    margin: auto;
+  padding: 100px 0;
+  width: 90%;
+  margin: auto;
 }
 
+.form-wrap {
+  width: 100%;
+  max-width: 700px;
+  /* PCでの最大幅（好みで調整） */
+  margin: 0 auto;
+  /* 中央寄せ */
+}
+
+.form-wrap iframe {
+  width: 100%;
+  height: 1200px;
+  /* フォームの長さに合わせて */
+  border: none;
+}
+
+.white {
+  color: #fff;
+}
+
+
 .section-title {
-    font-size: 28px;
-    text-align: center;
-    margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  font-size: 25px;
+  text-align: left;
+  margin-bottom: 0px;
+  color: #d39f9c;
+}
+
+.section-title:before {
+  border: 0.7px solid;
+  content: "";
+  width: 2em;
+}
+
+.section-title:before {
+  margin-right: 0.75em;
+  color: #d39f9c;
+}
+
+.gray {
+  margin-left: 4.5em;
+  font-weight: bold;
+  margin-bottom: 60px;
+}
+
+.gray p {
+  color: #929292;
+}
+
+.midasi {
+  font-size: 30px;
+  color: #2f4f4f;
+}
+
+.tyuou {
+  text-align: center;
+}
+
+.yokonarabi {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+}
+
+.textleft {
+  flex: 1;
+}
+
+.image-right {
+
+  flex: 1;
+}
+.image-center{
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+}
+
+.text-box {
+  /*width: 70%;        /* 箱の幅を決める */
+  /*display: inline-block;*/
+  max-width: 520px;
+  text-align: left;
+  /* 文字は左揃え */
+}
+
+.left {
+  margin-right: auto;
+  /* 左寄り */
+}
+
+.center {
+  text-align: center;
+  font-size: 22px;
+  margin: 0 auto;
+  /* 中央 */
+}
+
+.right {
+  margin-left: auto;
+  /* 右寄り */
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+  /* 見出しと本文の間の余白 */
+}
+
+.title {
+  width: 120px;
+  /* 見出しの幅を固定 */
+}
+
+.text {
+  flex: 1;
+  /* 残りの幅を本文に */
+}
+
+.title-card {
+  display: flex;
+  width: 20%;
+  align-items: center;
+  justify-content: center;
+  height: 160px;
+  /*background: #e6d2d0;*/
+  border-radius: 10px;
+  color: #5a4632;
+
+
 }
 
 /* メニュー部分（あなたの用途に近い） */
+/* ===== Menu Grid（最終版） ===== */
 .menu-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 24px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1100px;
+  /* 好みで */
 }
 
+/* タブレット */
+@media (max-width: 1000px) {
+  .menu-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* スマホ */
+@media (max-width: 700px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* 小さいスマホ */
+@media (max-width: 420px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== Card（最終版） ===== */
 .menu-card {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 160px;
-    background: #e6d2d0;
-    border-radius: 20px;
-    color: #5a4632;
-    text-decoration: none;
-    font-size: 18px;
-    transition: 0.3s;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  height: 160px;
+  padding: 16px;
+
+  background: #fff;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #333;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
+
+  word-break: break-word;
 }
 
 .menu-card:hover {
-    background: #d7b9b7;
+  background: #d39f9c;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
+
 
 .video-container {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%; /* 16:9 */
+  padding-bottom: 56.25%;
+  /* 16:9 */
   height: 0;
+  margin-bottom: 10%;
 }
 
 .video-container iframe {
@@ -77,38 +365,14 @@ body {
   border: 0;
 }
 
-.menu-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
+
+
+/*Home*/
+.home-content {
+  margin-top: 0 20px;
 }
 
-.menu-card {
-    display: block;
-    text-align: center;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    text-decoration: none;
-    color: #333;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: 0.2s;
-}
 
-.menu-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
-}
-
-/* スマホ用（2列） */
-@media (max-width: 768px) {
-    .menu-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
 .back-btn {
   width: 40px;
@@ -125,9 +389,318 @@ body {
 }
 
 .term-title-box {
-  display: inline-block;      
-  background: #e5e5e5;        /* 淡いグレー */
-  color: #2f4f4f;             /* 深い緑系（ダークスレートグレー） */
+  display: inline-block;
+  background: #e5e5e5;
+  /* 淡いグレー */
+  color: #2f4f4f;
+  /* 深い緑系（ダークスレートグレー） */
   padding: 0px 50px;
 
+}
+
+/*Contact
+-----------------*/
+#contact {
+  background-color: #faf7f5;
+  min-height: 100vh;
+}
+
+/*フォーム*/
+form div {
+  margin-bottom: 14px;
+}
+
+label {
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px #fff solid;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  max-width: 240px;
+}
+
+textarea {
+  width: 100%;
+  max-width: 480px;
+  height: 6rem;
+}
+
+input[type="submit"] {
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/*各動きペーじ
+----------------------*/
+#conte {
+  background-image: linear-gradient(#082a01, #d7b9b7);
+  height: 270px;
+  margin-bottom: 40px;
+}
+
+#conte .page-title {
+  text-align: center;
+}
+
+#conte p {
+  text-align: center;
+  color: #fff;
+}
+
+.menu-center {
+  text-align: center;
+
+}
+
+.anke {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.ankebottun {
+  display: inline-flex;
+  width: 500px;
+  height: 36px;
+  font-size: 1.375rem;
+  background: #3c4033;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 10px 10px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.ankebottun:hover {
+  background: #082a01;
+}
+
+.ankebottun2 {
+  display: inline-flex;
+  width: 500px;
+  height: 36px;
+  padding: 10px 10px;
+  font-size: 1.375rem;
+  background: #2f4f4f;
+  color: #ffffff;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 50px;
+}
+
+.ankebottun2:hover {
+  background: #082a01;
+}
+
+/* スマホ用（2列） */
+@media (max-width: 768px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+
+  /*Aboutとかその辺*/
+  .section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    text-align: left;
+    margin-bottom: 0px;
+    color: #d39f9c;
+  }
+
+  .section-title:after {
+    border: 0.7px solid;
+    content: "";
+    width: 2em;
+  }
+
+  .section-title:after {
+    margin-left: 0.75em;
+    color: #d39f9c;
+  }
+
+  .gray {
+    margin-left: 0px;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .midasi {
+    font-size: 20px;
+  }
+
+  .yokonarabi {
+    flex-direction: column-reverse;
+    /* ← これが肝 */
+    gap: 24px;
+  }
+  .image-right img{
+    width: 100%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .page-title {
+    font-size: 2.5rem;
+  }
+
+  /*HEAD*/
+  /* ヘッダー内で logo と ボタン を横並びに */
+  .page-header {
+    align-items: center;
+  }
+
+  /* ===== 半透明の背景（画面全体） ===== */
+  #global-nav {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    /* 半透明 */
+    display: none;
+    z-index: 1000;
+
+    /* ガラス感（対応ブラウザのみ） */
+    backdrop-filter: blur(6px);
+  }
+
+  #global-nav.is-open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* ===== ミニページ本体 ===== */
+
+  .menu-panel {
+    width: 85%;
+    height: 85vh;
+    /* ← 縦を画面基準に */
+    max-height: 640px;
+    /* 大きくなりすぎ防止 */
+    background: rgba(255, 255, 255, 0.5);
+    /* ← 透明感アップ */
+    overflow: hidden;
+    /* ロゴ部分も角丸に */
+
+    display: flex;
+    flex-direction: column;
+    /* ← 中身を縦に積む */
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  }
+
+  /* ===== ロゴエリア（上にどーん） ===== */
+  .menu-logo {
+    display: block;
+    padding: 32px 16px;
+    flex-shrink: 0;
+    /* ロゴは潰れない */
+    text-align: center;
+
+  }
+
+  .menu-logo img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+  }
+
+  /* ===== メニュー ===== */
+  .main-nav {
+    flex: 1;
+    /* ロゴ以外の高さを全部使う */
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-evenly;
+    /* ← 均等配置の肝 */
+    align-items: center;
+
+    padding: 16px 0;
+    margin: 0;
+  }
+
+  .main-nav li {
+    margin: 0;
+
+  }
+
+  .main-nav a {
+    display: block;
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+
+  .main-nav a:hover {
+    background: rgba(0, 0, 0, 0.06);
+  }
+
+  /* ハンバーガー表示 */
+  .hamburger {
+    display: block;
+    z-index: 1001;
+  }
+
+  .page-title {
+    font-size: 1.5rem;
+  }
+
+  /* ヘッダーは1行に */
+  .page-header {
+    align-items: center;
+  }
+
+  .ankebottun {
+    width: 350px;
+    font-size: 16px;
+    padding: 5px 5px;
+  }
+
+  .ankebottun2 {
+    width: 350px;
+    font-size: 16px;
+    padding: 5px 5px;
+  }
+
+  .center {
+    font-size: 16px;
+  }
+
+}
+
+
+
+
+
+
+/*フッター
+ーーーーーーーーーーーーーーーーー*/
+footer {
+  background: #3c4033;
+  text-align: center;
+  padding: 26px 0;
+}
+
+footer p {
+  color: #ffffff;
+  font-size: 0 0.875rem;
 }

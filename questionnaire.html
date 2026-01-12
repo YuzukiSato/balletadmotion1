@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/logotoumei.png">
+    <title>Questionnaire</title>
+</head>
+<div id="conte" class="cont">
+    <header class="page-header wrapper">
+
+        <h1><a href="index.html"><img class="logo" src="images/logoname.png"></a></h1>
+
+        <!-- 追加：ハンバーガーボタン -->
+        <button class="hamburger" id="hamburger" aria-controls="global-nav" aria-expanded="false">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+        </button>
+        <nav id="global-nav">
+            <div class="menu-panel">
+                <div class="menu-logo">
+                    <img src="images/logonamaekuro.png" alt="logo">
+                </div>
+                <ul class="main-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#how">How to</a></li>
+                    <li><a href="index.html#menu1">Menu</a></li>
+                     <li><a href="questionnaire.html">Questionnaire</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+        </nav>
+
+    </header>
+    <div class="wrapper">
+        <h2 class="page-title">Questionnaire</h2>
+        <p>アンケート</p>
+    </div>
+
+    <div class="home-content wrapper">
+
+    </div><!-- /.home-content -->
+</div><!-- /#home -->
+
+<body class="sub">
+
+
+
+    <section class="section">
+        <div class="center">
+        <h3>【映像をご覧いただいた方】</h3>
+        <p>こちらのアンケートへのご協力をお願いします</p>
+        </div>
+        <div class="anke">
+            <a class="ankebottun" href="https://forms.gle/bYUewcgx8U24TY4U8" target="_blank"
+                rel="noopener noreferrer">映像を見ていただいた方向け</a>
+        </div>
+                <div class="center">
+        <h3>【レッスンでご使用くださった指導者の方】</h3>
+            <p>こちらのアンケートへのご協力をお願いします</p>
+        </div>
+         <div class="anke">
+            <a class="ankebottun2" href="https://docs.google.com/forms/d/1IevU9R-codXmFfo9gLunAUpuX3wbHCmCvsHFgGEB_E8/edit" target="_blank"
+                rel="noopener noreferrer">レッスンで利用してくださった指導者の方向け</a>
+        </div>
+        <div class="center">
+        <h3>【まだ映像を見ていない方】</h3>
+            <p>以下のボタンより、映像をご覧ください</p>
+        </div>
+        <div class="menu-center">
+            <a class="bottun" href="index.html#menu">Menu</a>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <div class="wrapper">
+            <p><small>&copy; 2026 Yuzuki</small></p>
+        </div>
+    </footer>
+    <script>
+        const btn = document.getElementById('hamburger');
+        const nav = document.getElementById('global-nav');
+
+        btn.addEventListener('click', () => {
+            const open = nav.classList.toggle('is-open');
+            btn.setAttribute('aria-expanded', String(open));
+        });
+        // ★ 追加：メニュー内リンクを押したら閉じる
+        const menuLinks = nav.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('is-open');
+                btn.setAttribute('aria-expanded', 'false');
+            });
+        });
+        // PC幅に戻したら閉じる（任意）
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                nav.classList.remove('is-open');
+                btn.setAttribute('aria-expanded', 'false');
+            }
+        });
+    </script>
+</body>

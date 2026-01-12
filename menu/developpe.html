@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/png" href="../images/logotoumei.png">
+    <title>Developpe</title>
+</head>
+<div id="conte" class="cont">
+<header class="page-header wrapper">
+    
+    <h1><a href="../index.html"><img class="logo" src="../images/logoname.png"></a></h1>
+    
+    <!-- 追加：ハンバーガーボタン -->
+  <button class="hamburger" id="hamburger" aria-controls="global-nav" aria-expanded="false">
+    <span class="hamburger-bar"></span>
+    <span class="hamburger-bar"></span>
+    <span class="hamburger-bar"></span>
+  </button>
+         <nav id="global-nav">
+          <div class="menu-panel">
+    <div class="menu-logo">
+      <img src="../images/logonamaekuro.png" alt="logo">
+    </div>
+        <ul class="main-nav">
+      <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html#about1">About</a></li>
+          <li><a href="../index.html#how">Howto</a></li>
+          <li><a href="../index.html#menu1">Menu</a></li>
+          <li><a href="../questionnaire.html">Questionnaire</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+</header>
+<div class="wrapper">
+  <h2 class="page-title">Developpe</h2>
+  <p>デベロッぺ</p>
+</div>
+<div class="home-content wrapper">
+    
+</div><!-- /.home-content -->
+</div><!-- /#home -->
+<body class="sub">
+
+
+    <section class="section">
+
+        <div class="video-container">
+            <div style="padding:56.25% 0 0 0;position:relative;">
+                <iframe src="https://player.vimeo.com/video/1152612478?badge=0
+    &amp;autopause=0
+    &amp;player_id=0
+    &amp;app_id=58479" frameborder="0"
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                    title="Ballet Sense Animation ~Developpe~">
+                </iframe>
+            </div>
+
+        </div>
+        </div>
+    <div class="anke">
+      <a class="ankebottun" href="../questionnaire.html">アンケートへのご協力をお願いします</a>
+    </div>
+
+    <div class="menu-center">
+
+      <a class="bottun" href="../index.html#menu">Menuへ</a>
+    </div>
+    </section>
+    <footer>
+        <div class="wrapper">
+            <p><small>&copy; 2026 Yuzuki</small></p>
+        </div>
+    </footer>
+    <script>
+        const btn = document.getElementById('hamburger');
+        const nav = document.getElementById('global-nav');
+
+        btn.addEventListener('click', () => {
+            const open = nav.classList.toggle('is-open');
+            btn.setAttribute('aria-expanded', String(open));
+        });
+        // ★ 追加：メニュー内リンクを押したら閉じる
+        const menuLinks = nav.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('is-open');
+                btn.setAttribute('aria-expanded', 'false');
+            });
+        });
+        // PC幅に戻したら閉じる（任意）
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                nav.classList.remove('is-open');
+                btn.setAttribute('aria-expanded', 'false');
+            }
+        });
+    </script>
+</body>
+
+</html>
