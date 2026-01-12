@@ -1,61 +1,183 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ballet Sense Animation</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/logotoumei.png">
 </head>
 
 <body>
 
-<header class="hero">
-    <div class="hero-text">
-        <h1>Ballet Sense Animation</h1>
-        <p>イメージが視えるように</p>
-    </div>
-</header>
+    <div id="home" class="big-big">
+        <header class="page-header wrapper">
 
-<section class="info section">
-    <h2 class="section-title">Information</h2>
-    <div class="info-grid">
-        <!-- 情報カードを配置 -->
-         <p>修士研究の調査を行なっております。<br>
-            アンケート添える<br>
-            How toとかもあった方が良いかも？
-        </p>
-    </div>
-</section>
+            <h1><a href="#home"><img class="logo" src="images/logoname.png"></a></h1>
 
-<section class="about section">
-    <h2 class="section-title">About</h2>
-    <p>バレエの「そういう感じ…！」を、もっと伝えやす<br>
-モーショングラフィックスで力の向きや身体の意識を描き、<br>
-感覚的なアドバイスを視覚でサポートします。初心者にもやさしい、新しいバレエ学習のかたちです。
-</p>
-   <!-- 
+            <!-- 追加：ハンバーガーボタン -->
+            <button class="hamburger" id="hamburger" aria-controls="global-nav" aria-expanded="false">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+            <nav id="global-nav">
+                <div class="menu-panel">
+                    <div class="menu-logo">
+                        <img src="images/logonamaekuro.png" alt="logo">
+                    </div>
+                    <ul class="main-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#about1">About</a></li>
+                        <li><a href="index.html#how">Howto</a></li>
+                        <li><a href="#menu1">Menu</a></li>
+                        <li><a href="questionnaire.html">Questionnaire</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+        </header>
+
+        <div class="home-content wrapper">
+            <h2 class="page-title">Making invisible bodily sensations visible.</h2>
+            <div class="white">
+                <p>見えない感覚を、見える形へ</p>
+            </div>
+            <a class="bottun" href="#menu1">Menu</a>
+        </div><!-- /.home-content -->
+    </div><!-- /#home -->
+
+    <section class="info section">
+        <h2 class="section-title">Information</h2>
+        <div class="gray">
+                <p>お知らせ</p>
+            </div>
+        <div class="yokonarabi">
+            <!--<div class="textleft">
+                情報カードを配置 
+                <p>修士研究の調査を行なっております。<br>
+                    アンケート添える<br>
+                    How toとかもあった方が良いかも？
+                </p>
+            </div>-->
+             <div class="image-center">
+                <img src="images/banner_1.png" alt="banner">
+            </div>
+        </div>
+    </section>
+    <div id="about1">
+        <section class="about section">
+            <h2 class="section-title">About</h2>
+            <div class="gray">
+                <p>研究の背景</p>
+            </div>
+            <h3 class="midasi tyuou">からだの感覚を言語で伝える限界があるのでは</h3>
+            <div class="yokonarabi">
+            <div class="textleft">
+                <p>　バレエは「どういう感覚でその動作に持っていくか」が大切な舞踊だ。<br>
+                    そして、その感覚を伝えるために「言葉」が使われている。<br><br>
+                
+                    その言葉は、<br>
+                    たとえが使われたり、ジェスチャーが入ったり
+                    と様々な工夫がされている<br>
+                
+                    それを理解しようと一生懸命考えることは努力することは大切だ。</p>
+                    <h4>しかし、どうしてもわからないことってあるのではないか</h4>
+
+                   <h4>感覚を伝える側も、どうして伝わらないのかと悩むことがあるのではないか</h4>
+                    
+                <p> そこで、実写映像に感覚のアニメーションを重ねて、<br>
+                    視覚的な「感覚の理解」ができないかと考えたのが、このコンテンツです。
+                </p>
+            </div>
+            <div class="image-right">
+                <img src="images/about.png" alt="about">
+            </div>
+            </div>
+        </section>
+    </div>
+    <div id="how">
+    <section class="how section">
+            <h2 class="section-title">How to</h2>
+            <div class="gray">
+                <p>つかいかた</p>
+            </div>
+            <div class="yokonarabi">
+            <div class="textleft">
+                <img src="images/howto_study.jpg" alt="howto1">
+                <div class="anke">
+            <a class="ankebottun" href="https://forms.gle/bYUewcgx8U24TY4U8" target="_blank"
+                rel="noopener noreferrer">映像を見ていただいた方向け</a>
+        </div>
+            </div>
+            <div class="image-right">
+                <img src="images/howto_teach.jpg" alt="howto2">
+                <div class="anke">
+            <a class="ankebottun2" href="https://docs.google.com/forms/d/1IevU9R-codXmFfo9gLunAUpuX3wbHCmCvsHFgGEB_E8/edit" target="_blank"
+                rel="noopener noreferrer">レッスンで利用してくださった指導者の方向け</a>
+        </div>
+            </div>
+            </div>
+        
+
+        <!-- 
 <img src="gf.gif" class="about-img" width="860" height="540">
 -->
-</section>
-
-<section class="menu section">
-    <h2 class="section-title">~ Menu ~</h2>
-    <div class="menu-grid">
-        <a href="arabesque.html" class="menu-card">Pique Arabesque<br>ピケ・アラベスク</a>
-        <a href="#" class="menu-card">pirouette En dehors<br>ピルエット・アンディオール</a>
-        <a href="#" class="menu-card">Assemble<br>アッサンブレ</a>
-        <a href="#" class="menu-card">Echappe<br>エシャペ</a>
-        <a href="#" class="menu-card">Developpe<br>デベロッぺ</a>
-        <a href="#" class="menu-card">Penche<br>パンシェ</a>
-        <a href="#" class="menu-card">Tombe<br>トンべ・パ・ド・ブレ</a>
-        <a href="#" class="menu-card">Glissade<br>グリッサード</a>
-        <a href="#" class="menu-card">グリッサード</a>
-        <a href="#" class="menu-card">グリッサード</a>
-        <a href="#" class="menu-card">グリッサード</a>
-        <a href="#" class="menu-card">グリッサード</a>
-        <!-- 追加可能 -->
+    </section>
+    <div id="menu1">
+        <section class="menu section">
+            <div class="wrapper">
+                <h2 class="section-title">Menu</h2>
+                <div class="menu-grid">
+                    <a href="menu/arabesque.html" class="menu-card">Pique Arabesque<br>ピケ・アラベスク</a>
+                    <a href="menu/pirouette.html" class="menu-card">Pirouette En dehors<br>ピルエット・アンディオール</a>
+                    <a href="menu/assemble.html" class="menu-card">Assemble<br>アッサンブレ</a>
+                    <a href="menu/echappe.html" class="menu-card">Echappe<br>エシャペ</a>
+                    <a href="menu/developpe.html" class="menu-card">Developpe<br>デベロッぺ</a>
+                    <a href="menu/penche.html" class="menu-card">Penche<br>パンシェ</a>
+                    <a href="menu/tombe.html" class="menu-card">Tombe Pas de Bourree<br>トンべ・パ・ド・ブレ</a>
+                    <a href="menu/glissade.html" class="menu-card">Glissade<br>グリッサード</a>
+                    <a href="menu/jete.html" class="menu-card">Jete<br>ジュテ</a>
+                    <a href="menu/sussous.html" class="menu-card">Sus-Sous<br>シュ・スー</a>
+                    <a href="menu/soubresaut.html" class="menu-card">Soubresaut<br>スーブルソー</a>
+                    <a href="menu/piqueendedans.html" class="menu-card">Pique En Dedans<br>ピケ・アンデダン</a>
+                    <!-- 追加可能 -->
+                </div>
+            </div>
+        </section>
     </div>
-</section>
 
+    <footer>
+        <div class="wrapper">
+            <p><small>&copy; 2026 Yuzuki</small></p>
+        </div>
+    </footer>
+    <script>
+        const btn = document.getElementById('hamburger');
+        const nav = document.getElementById('global-nav');
+
+        btn.addEventListener('click', () => {
+            const open = nav.classList.toggle('is-open');
+            btn.setAttribute('aria-expanded', String(open));
+        });
+        // ★ 追加：メニュー内リンクを押したら閉じる
+        const menuLinks = nav.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('is-open');
+                btn.setAttribute('aria-expanded', 'false');
+            });
+        });
+        // PC幅に戻したら閉じる（任意）
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                nav.classList.remove('is-open');
+                btn.setAttribute('aria-expanded', 'false');
+            }
+        });
+    </script>
 </body>
+
 </html>
