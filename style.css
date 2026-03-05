@@ -133,7 +133,7 @@ img {
 }
 
 #home {
-  background-image: url(images/allgif.gif), linear-gradient(#3c4033, #d7b9b7);
+  background-image: url(images/allgif.gif);
   background-blend-mode: multiply;
   min-height: 100vh;
 }
